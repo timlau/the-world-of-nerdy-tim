@@ -26,12 +26,15 @@ Create a new `.md` file in `src/content/blog/`:
 title: 'My new post'
 description: 'A short summary shown in lists and feeds.'
 pubDate: 'Nov 19 2026'
+tags: ['linux', 'programming']
 ---
 
 Your content here.
 ```
 
-Optional frontmatter: `updatedDate` and `heroImage` (a relative path to an image in `src/assets/`).
+Optional frontmatter: `updatedDate`, `heroImage` (a relative path to an image in `src/assets/`), and
+`tags` (defaults to an empty list). Tagged posts are listed on `/blog/tags/` and on a page for each
+tag, e.g. `/blog/tags/linux/`.
 
 ## Deployment
 

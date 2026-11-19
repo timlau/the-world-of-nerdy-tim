@@ -1,38 +1,28 @@
 ---
-title: 'Living in Omarchy: One Year of a Very Opinionated Desktop'
-description: 'What stuck after a year of running Omarchy on Fedora, and the handful of tweaks I actually kept.'
+title: 'Living in Omarchy and Loving It'
+description: 'Why I switched from Fedora to Omarchy and what keeps me there.'
 pubDate: 'Nov 12 2026'
+tags: ['linux', 'omarchy', 'desktop']
 ---
 
-I have a bad habit of rebuilding my desktop setup every few months. New distro, new bar, new set
-of keybindings I will forget by Thursday. Omarchy is the first setup that survived a full year
-mostly intact.
+I'd been running Fedora as my personal desktop for 20 years, but when Omarchy 3.0 was released, I
+switched. Now I'm on Omarchy 4.5, and I'm loving it. I've made more progress with this setup in a few
+months than I did in 20 years with Fedora. I also love the deep integration with AI.
 
 ## What I like
 
-The appeal is not that it does anything magical. It is that someone else already made the
-decisions. Tiling layout, a sensible bar, a theme system that applies everywhere, and keybindings
-that are documented in one place.
+The appeal is not that it does anything magical. It's that someone else has already made the
+decisions: a tiling layout, a sensible bar, a theme system that applies everywhere, keybindings
+documented in one place, and plenty of cool plugins.
 
-- **Themes are global.** One command changes terminals, editor, bar, and notifications together.
+- **Themes are global.** One command changes the terminal, editor, bar, and notifications together.
 - **The defaults are good.** I stopped tweaking because there was nothing obviously broken.
-- **It stays out of the way.** Config is plain text in `~/.config`, not a custom DSL.
-
-## What I changed
-
-Not much, honestly. I remapped a few keys, added a couple of window rules for apps that refuse to
-behave, and switched the terminal font. That is the whole list.
-
-```ini
-# ~/.config/hypr/hyprland.conf (excerpt)
-windowrulev2 = float, class:^(pavucontrol)$
-windowrulev2 = size 900 600, class:^(pavucontrol)$
-```
+- **It stays out of the way.** If I want to change anything, I just ask an AI agent to do it.
 
 ## The takeaway
 
-The best desktop environment is the one you stop thinking about. For me that turned out to be the
-one where the interesting decisions were already made, and the remaining ones are easy to change.
+The best desktop environment is the one you stop thinking about. For me, that's the one where the
+interesting decisions have already been made and the rest are easy to change.
 
 If you keep rebuilding your setup every season, try letting someone else's opinions run for a
-year. You might accidentally get some work done.
+while. You might accidentally get some work done.

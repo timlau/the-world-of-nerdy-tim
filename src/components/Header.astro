@@ -15,6 +15,7 @@ import HeaderLink from './HeaderLink.astro';
 		<div class="internal-links">
 			<HeaderLink href={url()}>Home</HeaderLink>
 			<HeaderLink href={url('blog')}>Blog</HeaderLink>
+			<HeaderLink href={url('blog/tags')} matchNested>Tags</HeaderLink>
 			<HeaderLink href={url('about')}>About</HeaderLink>
 		</div>
 		<div class="social-links">

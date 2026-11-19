@@ -17,7 +17,7 @@
 		0 16px 32px rgba(var(--gray), 33%);
 }
 body {
-	font-family: var(--font-atkinson);
+	font-family: var(--font-inter);
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -28,6 +28,10 @@ body {
 	color: rgb(var(--gray-dark));
 	font-size: 20px;
 	line-height: 1.7;
+}
+time,
+.count {
+	font-variant-numeric: tabular-nums;
 }
 main {
 	width: 720px;
@@ -43,22 +47,27 @@ h5,
 h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
+	font-family: var(--font-poppins), sans-serif;
+	font-weight: 600;
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2.2em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.7em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.4em;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.2em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1.05em;
+}
+h6 {
+	font-size: 1em;
 }
 strong,
 b {
@@ -73,8 +82,26 @@ a:hover {
 p {
 	margin-bottom: 1em;
 }
+.prose {
+	font-size: 0.9em;
+	line-height: 1.45;
+}
+.prose h1 {
+	font-size: 2.2em;
+}
+.prose h2 {
+	font-size: 1.6em;
+}
+.prose h3 {
+	font-size: 1.3em;
+}
+.prose h4,
+.prose h5,
+.prose h6 {
+	font-size: 1.1em;
+}
 .prose p {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 textarea {
 	width: 100%;
@@ -120,6 +147,38 @@ hr {
 	main {
 		padding: 1em;
 	}
+}
+
+/* Tag colors */
+.tag-indigo {
+	--tag-bg: #eef2ff;
+	--tag-border: #c7d2fe;
+	--tag-text: #3730a3;
+}
+.tag-violet {
+	--tag-bg: #f5f3ff;
+	--tag-border: #ddd6fe;
+	--tag-text: #5b21b6;
+}
+.tag-teal {
+	--tag-bg: #ecfeff;
+	--tag-border: #a5f3fc;
+	--tag-text: #0f766e;
+}
+.tag-amber {
+	--tag-bg: #fffbeb;
+	--tag-border: #fde68a;
+	--tag-text: #92400e;
+}
+.tag-rose {
+	--tag-bg: #fff1f2;
+	--tag-border: #fecdd3;
+	--tag-text: #9f1239;
+}
+.tag-lime {
+	--tag-bg: #f0fdf4;
+	--tag-border: #bbf7d0;
+	--tag-text: #166534;
 }
 
 .sr-only {
