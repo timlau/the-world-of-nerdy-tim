@@ -1,6 +1,6 @@
 {
   "name": "the-world-of-nerdy-tim",
-  "description": "Personal blog of Nerdy Tim: Linux, audio plugins, Zig, and other detours.",
+  "description": "Personal blog of Tim: Linux, audio plugins, Zig, and other detours.",
   "type": "module",
   "version": "0.0.1",
   "engines": {

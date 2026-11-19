@@ -9,14 +9,16 @@ interface Props {
 }
 
 const { image, alt, priority = false } = Astro.props;
+const width = Math.min(image.width, 1020);
+const height = Math.round(width * (image.height / image.width));
 ---
 
 <div class="page-hero">
 	<Image
 		src={image}
 		alt={alt}
-		width={1020}
-		height={446}
+		width={width}
+		height={height}
 		loading={priority ? 'eager' : 'lazy'}
 		class="page-hero__image"
 	/>
@@ -30,8 +32,10 @@ const { image, alt, priority = false } = Astro.props;
 	}
 	.page-hero__image {
 		display: block;
-		width: 100%;
+		width: auto;
+		max-width: 100%;
 		height: auto;
+		margin: 0 auto;
 		border-radius: 12px;
 		box-shadow: 0 1px 3px rgba(var(--gray), 20%);
 	}

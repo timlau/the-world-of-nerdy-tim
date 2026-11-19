@@ -1,4 +1,4 @@
-# The World of Nerdy Tim
+# The World of Tim
 
 A personal blog about Linux desktops, audio plugins, Zig, and other nerdy detours.
 
