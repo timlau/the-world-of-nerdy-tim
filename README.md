@@ -2,20 +2,20 @@
 
 A personal blog about Linux desktops, audio plugins, Zig, and other nerdy detours.
 
-Built with [Astro](https://astro.build). Content lives in `src/content/blog/` as Markdown or MDX.
+Built with [Astro](https://astro.build) and hosted on [Cloudflare Workers](https://workers.cloudflare.com)
+with static assets. Content lives in `src/content/blog/` as Markdown or MDX.
 
 ## Commands
 
-| Command           | Action                                      |
-| :---------------- | :------------------------------------------ |
-| `npm install`     | Install dependencies                        |
-| `npm run dev`     | Start the dev server at `localhost:4321`    |
-| `npm run build`   | Build the production site to `./dist/`      |
-| `npm run preview` | Preview the build locally                   |
-| `npm run astro`   | Run Astro CLI commands                      |
-
-> The site is configured with `base: '/the-world-of-nerdy-tim'` for GitHub Pages project hosting,
-> so the dev server serves it at <http://localhost:4321/the-world-of-nerdy-tim/>.
+| Command              | Action                                        |
+| :------------------- | :-------------------------------------------- |
+| `npm install`        | Install dependencies                          |
+| `npm run dev`        | Start the dev server at `localhost:4321`      |
+| `npm run build`      | Build the production site to `./dist/`        |
+| `npm run preview`    | Preview the Astro build locally               |
+| `npm run deploy`     | Build and deploy to Cloudflare Workers        |
+| `npm run preview:worker` | Build and run the site in the Workers runtime |
+| `npm run astro`      | Run Astro CLI commands                        |
 
 ## Adding a post
 
@@ -35,12 +35,20 @@ Optional frontmatter: `updatedDate` and `heroImage` (a relative path to an image
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and deploys it
-to GitHub Pages at:
+The site is deployed as a Cloudflare Worker with static assets. [wrangler.jsonc](./wrangler.jsonc)
+points the Worker at the `dist/` directory produced by Astro.
 
-<https://timlau.github.io/the-world-of-nerdy-tim/>
+```sh
+npx wrangler login   # once per machine
+npm run deploy
+```
 
-In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
+The site is served at:
+
+<https://the-world-of-nerdy-tim.tim-lauridsen.workers.dev>
+
+To use a custom domain, add a route or custom domain to the Worker in the Cloudflare dashboard,
+then update `site` in `astro.config.mjs` so canonical URLs and the sitemap stay correct.
 
 ## License
 

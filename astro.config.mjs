@@ -6,8 +6,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://timlau.github.io',
-	base: '/the-world-of-nerdy-tim',
+	site: 'https://the-world-of-nerdy-tim.tim-lauridsen.workers.dev',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
