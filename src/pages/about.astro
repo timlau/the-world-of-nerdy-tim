@@ -1,0 +1,79 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_AUTHOR, SITE_GITHUB } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="About"
+			description="About Tim Lauridsen — Linux tinkerer, audio plugin enthusiast, and occasional Zig programmer."
+		/>
+		<style>
+			h1 {
+				margin: 0 0 0.75em;
+				font-size: clamp(2rem, 5vw, 2.8rem);
+				line-height: 1.1;
+				letter-spacing: -0.02em;
+			}
+			.lede {
+				font-size: 1.15em;
+				color: rgb(var(--gray));
+			}
+			h2 {
+				margin-top: 1.6em;
+			}
+			ul {
+				padding-left: 1.2em;
+			}
+			li {
+				margin: 0.3em 0;
+			}
+			.card {
+				margin-top: 2em;
+				padding: 1.25em 1.5em;
+				border-left: 4px solid var(--accent);
+				background: white;
+				border-radius: 0 12px 12px 0;
+				box-shadow: 0 1px 3px rgba(var(--gray), 20%);
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Hello, I'm {SITE_AUTHOR} 👋</h1>
+			<p class="lede">
+				I write about the things I break, fix, and occasionally ship: Linux desktops, audio
+				software, and whatever programming language has my attention this month.
+			</p>
+
+			<p>
+				By day I work on Linux and packaging; by night I tinker with my desktop setup, build
+				small tools, and make music-adjacent software. This blog is where I keep notes that are
+				too long for a commit message and too useful to lose in a chat history.
+			</p>
+
+			<h2>Things I tinker with</h2>
+			<ul>
+				<li><strong>Linux desktops</strong> — Fedora, Hyprland, and the Omarchy way of doing things.</li>
+				<li><strong>Audio plugins</strong> — building, packaging, and playing with synths and effects.</li>
+				<li><strong>Zig &amp; GTK</strong> — small desktop apps with a soft spot for native toolkits.</li>
+				<li><strong>Python</strong> — scripting the boring parts away.</li>
+				<li><strong>Vinyl</strong> — the analog kind of nerdery.</li>
+			</ul>
+
+			<div class="card">
+				<p>
+					You can find my code and experiments on
+					<a href={SITE_GITHUB} target="_blank" rel="me">GitHub</a>. If something here helped
+					you, that's the whole point.
+				</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
