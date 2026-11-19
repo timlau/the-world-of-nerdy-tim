@@ -1,6 +1,6 @@
 ---
 title: 'SQUEEZE, new album from Junkyard Drive'
-description: "SQUEEZE, new album from Junkyard Drive"
+description: "New awesome album from one of the best danish rock band, Junkyard Drive"
 pubDate: 'Nov 19 2026'
 heroImage: 'jd-squeeze.webp'
 tags: ['music', 'rock']

@@ -1,7 +1,7 @@
 ---
 title: 'Hello, Nerdy World'
 description: "Why I'm starting a blog in 2026 and what you can expect to find here."
-pubDate: 'Nov 19 2026'
+pubDate: 'Nov 18 2026'
 heroImage: 'pexels-pixabay-262508.webp'
 tags: ['blogging', 'meta']
 ---
