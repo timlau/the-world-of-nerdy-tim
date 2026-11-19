@@ -1,81 +1,100 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_GITHUB } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import PageHero from "../components/PageHero.astro";
+import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_GITHUB } from "../consts";
+import { aboutHero } from "../utils/heroImages";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead
-			title="About"
-			description={`About ${SITE_AUTHOR} — ${SITE_DESCRIPTION}`}
-		/>
-		<style>
-			h1 {
-				margin: 0 0 0.75em;
-				line-height: 1.15;
-				letter-spacing: -0.02em;
-			}
-			.lede {
-				font-size: 1.1em;
-				color: rgb(var(--gray));
-			}
-			h2 {
-				margin-top: 1.6em;
-			}
-			ul {
-				padding-left: 1.2em;
-			}
-			li {
-				margin: 0.3em 0;
-			}
-			.card {
-				margin-top: 2em;
-				padding: 1.25em 1.5em;
-				border-left: 4px solid var(--accent);
-				background: white;
-				border-radius: 0 12px 12px 0;
-				box-shadow: 0 1px 3px rgba(var(--gray), 20%);
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<div class="prose">
-				<h1>Hello, I'm {SITE_AUTHOR} 👋</h1>
-				<p class="lede">
-					I write about the things I break, fix, and occasionally ship: Linux desktops, audio
-					software, and whatever programming language has my attention this month.
-				</p>
+    <head>
+        <BaseHead
+            title="About"
+            description={`About ${SITE_AUTHOR} — ${SITE_DESCRIPTION}`}
+            image={aboutHero}
+        />
+        <style>
+            h1 {
+                margin: 0 0 0.75em;
+                line-height: 1.15;
+                letter-spacing: -0.02em;
+            }
+            .lede {
+                font-size: 1.1em;
+                color: rgb(var(--gray));
+            }
+            h2 {
+                margin-top: 1.6em;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin: 0.3em 0;
+            }
+            .card {
+                margin-top: 2em;
+                padding: 1.25em 1.5em;
+                border-left: 4px solid var(--accent);
+                background: white;
+                border-radius: 0 12px 12px 0;
+                box-shadow: 0 1px 3px rgba(var(--gray), 20%);
+            }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <PageHero image={aboutHero} alt="About Tim Lauridsen" priority />
+            <div class="prose">
+                <h1>Hello, I'm {SITE_AUTHOR} 👋</h1>
+                <p class="lede">
+                    I write about the things I break, fix, and occasionally
+                    ship: Linux desktops, audio software, and whatever
+                    programming language has my attention this month.
+                </p>
 
-				<p>
-					By day I work with IT operations and mail security; by night I tinker with my desktop
-					setup, build small tools, and make music-adjacent software. This blog is where I keep
-					notes that are too long for a commit message and too useful to lose in a chat history.
-				</p>
+                <p>
+                    By day I work with IT operations and mail security; by night
+                    I tinker with my desktop setup, build small tools, and make
+                    music-adjacent software. This blog is where I keep notes
+                    that are too long for a commit message and too useful to
+                    lose in a chat history.
+                </p>
 
-				<h2>Things I tinker with</h2>
-				<ul>
-					<li><strong>Linux desktops</strong> — the Omarchy way of doing things.</li>
-					<li>
-						<strong>Audio plugins</strong> — building, packaging, and playing with synths and effects.
-					</li>
-					<li><strong>Python</strong> — scripting the boring parts away.</li>
-					<li><strong>Vinyl</strong> — the analog kind of nerdery.</li>
-				</ul>
+                <h2>Things I tinker with</h2>
+                <ul>
+                    <li>
+                        <strong>Linux desktops</strong> — the Omarchy way of
+                        doing things.
+                    </li>
+                    <li>
+                        <strong>Audio plugins</strong> — building, packaging,
+                        and playing with synths and effects.
+                    </li>
+                    <li>
+                        <strong>Python</strong> — scripting the boring parts
+                        away.
+                    </li>
+                    <li>
+                        <strong>Vinyl</strong> — the analog kind of nerdery.
+                    </li>
+                </ul>
 
-				<div class="card">
-					<p>
-						You can find my code and experiments on
-						<a href={SITE_GITHUB} target="_blank" rel="me">GitHub</a>. If something here helped
-						you, that's the whole point.
-					</p>
-				</div>
-			</div>
-		</main>
-		<Footer />
-	</body>
+                <div class="card">
+                    <p>
+                        You can find my code and experiments on{" "}
+                        <a href={SITE_GITHUB} target="_blank" rel="me">
+                            GitHub
+                        </a>.
+                        <br />If something here helped you, that's the whole
+                        point.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <Footer />
+    </body>
 </html>

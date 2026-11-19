@@ -2,6 +2,7 @@
 title: 'Living in Omarchy and Loving It'
 description: 'Why I switched from Fedora to Omarchy and what keeps me there.'
 pubDate: 'Nov 12 2026'
+heroImage: 'omarchy.webp'
 tags: ['linux', 'omarchy', 'desktop']
 ---
 

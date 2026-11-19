@@ -6,3 +6,5 @@ export const SITE_DESCRIPTION =
 	'Notes from the world of a Linux tinkerer, music lover, space enthusiast, content creator, and tech explorer';
 export const SITE_AUTHOR = 'Tim Lauridsen';
 export const SITE_GITHUB = 'https://github.com/timlau';
+export const SITE_YOUTUBE = 'https://www.youtube.com/@timlaudk';
+export const SITE_X = 'https://x.com/NerdyTim_666';

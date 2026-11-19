@@ -1,5 +1,8 @@
 # build output
 dist/
+
+# personal documents / non-image files in the hero image folder
+src/assets/images/*.pdf
 # generated types
 .astro/
 

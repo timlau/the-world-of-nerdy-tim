@@ -32,9 +32,28 @@ tags: ['linux', 'programming']
 Your content here.
 ```
 
-Optional frontmatter: `updatedDate`, `heroImage` (a relative path to an image in `src/assets/`), and
-`tags` (defaults to an empty list). Tagged posts are listed on `/blog/tags/` and on a page for each
-tag, e.g. `/blog/tags/linux/`.
+Optional frontmatter: `updatedDate`, `heroImage`, and `tags` (defaults to an empty list). Tagged posts
+are listed on `/blog/tags/` and on a page for each tag, e.g. `/blog/tags/linux/`.
+
+### Adding a top image to a post
+
+Put the image in `src/assets/images/` and add its filename to the post's frontmatter:
+
+```markdown
+heroImage: 'my-photo.webp'
+```
+
+The filename can be used with or without its extension. The image is shown at the top of the post,
+used as its social preview, and optimized automatically at build time.
+
+The home and blog pages share the photo `src/assets/images/pexels-pixabay-262508.webp`, and the About
+page uses a personal photo at `src/assets/images/about.jpg`. The remaining hero illustrations live
+in `src/assets/illustrations/` as SVG sources. After editing them, regenerate their WebP files in
+`src/assets/images/` with:
+
+```sh
+node scripts/build-hero-images.mjs
+```
 
 ## Deployment
 
@@ -48,10 +67,11 @@ npm run deploy
 
 The site is served at:
 
-<https://the-world-of-nerdy-tim.tim-lauridsen.workers.dev>
+<https://worldoftim.org>
 
-To use a custom domain, add a route or custom domain to the Worker in the Cloudflare dashboard,
-then update `site` in `astro.config.mjs` so canonical URLs and the sitemap stay correct.
+`site` in `astro.config.mjs` is set to this hostname so canonical URLs, the sitemap, RSS links, and
+social preview images use the correct domain. The Cloudflare Worker domain must be configured for
+`worldoftim.org` in the Cloudflare dashboard for the deployed site to serve there.
 
 ## License
 
