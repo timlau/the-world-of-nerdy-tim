@@ -46,6 +46,15 @@ heroImage: 'my-photo.webp'
 The filename can be used with or without its extension. The image is shown at the top of the post,
 used as its social preview, and optimized automatically at build time.
 
+### Embedding videos
+
+In an `.mdx` post, put a YouTube URL on its own line and `astro-embed` turns it into a lightweight
+embed that only loads the player when clicked:
+
+```mdx
+[https://www.youtube.com/watch?v=LgODcqjQIUE](https://www.youtube.com/watch?v=LgODcqjQIUE)
+```
+
 The home and blog pages share the photo `src/assets/images/pexels-pixabay-262508.webp`, and the About
 page uses a personal photo at `src/assets/images/about.jpg`. The remaining hero illustrations live
 in `src/assets/illustrations/` as SVG sources. After editing them, regenerate their WebP files in
