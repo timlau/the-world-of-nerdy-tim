@@ -3,14 +3,14 @@
 import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import embeds from 'astro-embed/integration';
 import { defineConfig, fontProviders } from 'astro/config';
+import { embedIntegrations } from './astro-embed-unified.mjs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://worldoftim.org',
 	// astro-embed must come before mdx so media URLs on their own line become embeds.
-	integrations: [embeds(), mdx(), sitemap()],
+	integrations: [...embedIntegrations(), mdx(), sitemap()],
 	// astro-embed uses remark plugins, which need the unified Markdown processor on Astro 7.
 	markdown: { processor: unified() },
 	fonts: [
